@@ -4,7 +4,7 @@
 //int Thread::generalid = 0;
 
 Result::Result(std::shared_ptr<Task> task,bool bIsValid)
-  :task_(task)
+  :task_(std::move(task))
   ,bIsValid_(bIsValid)
 {
   //  ???????why 
