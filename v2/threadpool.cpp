@@ -33,6 +33,7 @@ Task::Task()
 {
 
 }
+// exec退役了
 void Task::exec()
 {
   // if(nullptr != result_)
@@ -97,6 +98,7 @@ Result ThreadPool::submit(std::shared_ptr<Task> task)
 
     //taskQue_.emplace(task);
     std::shared_ptr<Result> result = std::make_shared<Result>(task);
+    // 注意看这里和v1的区别
     taskQue_.emplace([result](){
         Any any = result->task_->run();
         result->setAny(std::move(any));
