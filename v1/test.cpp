@@ -37,8 +37,8 @@ int main()
     // pool.submit(std::make_shared<MyTask>(task1));
     // pool.submit(std::make_shared<MyTask>(task1));
     // pool.submit(std::make_shared<MyTask>(task1));
-    Result res1 = pool.submit(std::make_shared<MyTask>(task1));
-    Result res = pool.submit(std::make_shared<MyTask>(task1));
+    //Result res1 = pool.submit(std::make_shared<MyTask>(task1));
+    //Result res = pool.submit(std::make_shared<MyTask>(task1));
     
 
     int num = res.get().cast_<int>();
